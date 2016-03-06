@@ -9,11 +9,14 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loaders: ['babel']
-    },{
+      loader: 'babel',
+      query: {
+        presets: ['es2015']
+      },
+    }, {
       test: /\.scss$/,
       loaders: ['style', 'css', 'sass']
-    },{
+    }, {
       test: /\.png$/,
       loaders: ['url']
     }]
